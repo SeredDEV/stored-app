@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 # stored-app
 # stored-app
 # stored-app
+# stored-app
