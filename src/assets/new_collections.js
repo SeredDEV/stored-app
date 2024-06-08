@@ -95,7 +95,7 @@ let new_collections = [
   {
     id: 7,
     name: "Siamese",
-    image: siames1_img,
+    image: siames2_img,
     new_price: 60.0,
     old_price: 100.5,
     description: "Elegant Siamese cat on a windowsill.",
