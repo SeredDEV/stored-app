@@ -6,7 +6,8 @@ import ShopCategory from './Pages/ShopCategory';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import LoginSingup from './Pages/LoginSingup';
-
+import men_banner from './assets/banner/banner_mens.png'
+import women_banner from './assets/banner/banner_women.png'
 
 const App = () => {
   return (
@@ -15,8 +16,8 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Shop />} />
-          <Route path="/cat" element={<ShopCategory category="cat" />} />
-          <Route path="/dog" element={<ShopCategory category="dog" />} />
+          <Route path="/cat" element={<ShopCategory banner={men_banner} category="cat" />} />
+          <Route path="/dog" element={<ShopCategory banner={women_banner} category="dog" />} />
           <Route path="/product" element={<Product />} />
           < Route path=":productId" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
