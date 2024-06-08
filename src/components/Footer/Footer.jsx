@@ -1,5 +1,4 @@
 import React from 'react'
-import './Footer.css'
 import { logo } from '../../assets';
 
 const Footer = () => {
@@ -16,7 +15,6 @@ const Footer = () => {
                 <li className="hover:text-gray-600 cursor-pointer">About</li>
                 <li className="hover:text-gray-600 cursor-pointer">Contact</li>
             </ul>
-
             <div>
                 <div class="flex items-center gap-6">
                     <a class="text-gray-700 hover:text-orange-600" aria-label="Visit TrendyMinds LinkedIn" href="https://www.linkedin.com/in/sered9505/" target="_blank"><svg
