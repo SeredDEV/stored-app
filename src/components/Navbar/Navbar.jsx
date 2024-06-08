@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 import { logo } from '../../assets';
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     const [menu, setMenu] = useState("shop");
     const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
 
+    const handleMenuClick = (menuItem) => {
+        setMenu(menuItem);
+        setIsOpen(false);
+        navigate(`/${menuItem}`);
+    };
+
     return (
         <div className="navbar navbar-expand-lg bg-light w-100 flex justify-between items-center py-2 px-2 sm:px-6 md:px-5 lg:px-10 xl:px-20">
-            <a className="navbar-brand flex items-center">
+            <Link to="/" className="navbar-brand flex items-center" onClick={() => setMenu('shop')}>
                 <img src={logo} alt="Logo" className="w-24 h-18 sm:w-20 sm:h-15 md:w-22 md:h-16 lg:w-24 lg:h-18 inline-block align-middle" />
                 <span className="logo-text ml-2 sm:text-4xl md:text-3xl lg:text-5xl xl:text-5xl">
                     <span className="text-blue-900">P</span>
@@ -21,11 +27,11 @@ const Navbar = () => {
                     <span className="text-red-500">o</span>
                     <span className="text-blue-400">p</span>
                 </span>
-            </a>
+            </Link>
             <ul className="hidden md:flex justify-center space-x-10 md:space-x-3 lg:space-x-4 xl:space-x-10">
                 <li className={`list-none ${menu === 'shop' ? 'text-gray-800' : ''}`} onClick={() => setMenu('shop')}>
                     <a className="flex items-center text-gray-800 hover:text-blue-900 text-3xl md:text-xl lg:text-3xl">
-                        <StoreIcon className={`mr-1 stroke-current transition-transform duration-500 ease-in-out hover:rotate-360 ${location.pathname === '/' ? 'text-blue-400' : ''}`} />
+                        <StoreIcon className={`mr-1 stroke-current ${location.pathname === '/' ? 'text-blue-400' : ''}`} />
                         <Link className={`no-underline ${location.pathname === '/' ? 'text-red-500' : 'text-current'}`} to="/">Shop</Link>
                     </a>
                 </li>
@@ -42,7 +48,6 @@ const Navbar = () => {
                     </a>
                 </li>
             </ul>
-
             <div className="flex justify-end items-center space-x-8 md:space-x-3 lg:space-x-3 xl:space-x-8">
                 <Link className="hidden md:flex items-center no-underline text-2xl md:text-lg lg:text-xl xl:text-2xl bg-blue-400 text-white py-2 px-3 md:px-2  lg:px-3  rounded" to="/login">
                     <LogInIcon className=" md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-auto xl:h-auto" />
@@ -58,36 +63,39 @@ const Navbar = () => {
                             0
                         </div>
                     </div>
-
-
                     <div className="relative md:hidden" style={{ zIndex: 9999 }}>
                         <button onClick={() => { setIsOpen(!isOpen); }}>
                             <MenuIcon className="h-6 w-6" />
                         </button>
                         {isOpen && (
-                            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-screen h-40 py-2 mt-2 bg-white rounded-lg shadow-xl">
-                                <ul className="flex flex-col space-y-2">
-                                    <li className={`list-none ${menu === 'shop' ? 'text-gray-800' : ''}`} onClick={() => setMenu('shop')}>
-                                        <a className="flex items-center text-gray-800 hover:text-blue-900">
+                            <div className="fixed top-0 left-0 w-full h-screen bg-white z-50 flex flex-col items-center justify-center">
+                                <ul className="flex flex-col space-y-8 text-center w-full">
+                                    <li className={`list-none ${menu === 'shop' ? 'text-gray-800' : ''}`} onClick={() => handleMenuClick()}>
+                                        <Link className="flex items-center justify-center text-gray-800 hover:text-blue-900" to="/">
+                                            <img src={logo} alt="Logo" className="w-60  inline-block align-middle" />
+                                        </Link>
+                                    </li>
+                                    <li className={`list-none ${menu === 'shop' ? 'text-gray-800' : ''}`} onClick={() => handleMenuClick('shop')}>
+                                        <Link className="flex items-center justify-center text-gray-800 hover:text-blue-900" to="/">
                                             <StoreIcon className={`mr-1 stroke-current transition-transform duration-500 ease-in-out hover:rotate-360 ${location.pathname === '/' ? 'text-blue-400' : ''}`} />
-                                            <Link className={`no-underline ${location.pathname === '/' ? 'text-red-500' : 'text-current'}`} to="/">Shop</Link>
-                                        </a>
+                                            Shop
+                                        </Link>
                                     </li>
-                                    <li className={`list-none ${menu === 'cat' ? 'active' : ''}`} onClick={() => setMenu('cat')}>
-                                        <a className="flex items-center text-gray-800 hover:text-blue-700">
+                                    <li className={`list-none ${menu === 'cat' ? 'active' : ''}`} onClick={() => handleMenuClick('cat')}>
+                                        <Link className="flex items-center justify-center text-gray-800 hover:text-blue-700" to="/cat">
                                             <CatIcon className={`mr-1 stroke-current ${location.pathname === '/cat' ? 'text-blue-900' : ''}`} />
-                                            <Link className={`no-underline ${location.pathname === '/cat' ? 'text-red-500' : 'text-current'}`} to="/cat">Cat</Link>
-                                        </a>
+                                            Cat
+                                        </Link>
                                     </li>
-                                    <li className={`list-none ${menu === 'dog' ? 'active' : ''}`} onClick={() => setMenu('dog')}>
-                                        <a className="flex items-center text-gray-800 hover:text-blue-700">
+                                    <li className={`list-none ${menu === 'dog' ? 'active' : ''}`} onClick={() => handleMenuClick('dog')}>
+                                        <Link className="flex items-center justify-center text-gray-800 hover:text-blue-700" to="/dog">
                                             <DogIcon style={{ marginRight: "5px", stroke: location.pathname === '/dog' ? '#627ee4' : '' }} />
-                                            <Link className={`no-underline ${location.pathname === '/dog' ? 'text-red-500' : 'text-current'}`} to="/dog">Dog</Link>
-                                        </a>
+                                            Dog
+                                        </Link>
                                     </li>
-                                    <li>
-                                        <Link className="flex items-center no-underline text-2xl md:text-xl lg:text-xl xl:text-2xl bg-blue-400 text-white py-2 px-3 md:px-2  lg:px-3  rounded" to="/login">
-                                            <LogInIcon className=" md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-auto xl:h-auto" />
+                                    <li className="flex justify-center" onClick={() => handleMenuClick('login')}>
+                                        <Link className="flex items-center justify-center no-underline text-xl bg-blue-400 text-white py-1 px-2 rounded w-auto" to="/login">
+                                            <LogInIcon className="mr-1" />
                                             Login
                                         </Link>
                                     </li>
@@ -95,14 +103,7 @@ const Navbar = () => {
                             </div>
                         )}
                     </div>
-
-
-
-
-
-
                 </div>
-
             </div>
         </div>
     );
