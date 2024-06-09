@@ -30,22 +30,22 @@ const Navbar = () => {
             </Link>
             <ul className="hidden md:flex justify-center space-x-10 md:space-x-3 lg:space-x-4 xl:space-x-10">
                 <li className={`list-none ${menu === 'shop' ? 'text-gray-800' : ''}`} onClick={() => setMenu('shop')}>
-                    <a className="flex items-center text-gray-800 hover:text-blue-900 text-3xl md:text-xl lg:text-3xl">
+                    <div className="flex items-center text-gray-800 hover:text-blue-900 text-3xl md:text-xl lg:text-3xl">
                         <StoreIcon className={`mr-1 stroke-current ${location.pathname === '/' ? 'text-blue-400' : ''}`} />
                         <Link className={`no-underline ${location.pathname === '/' ? 'text-red-500' : 'text-current'}`} to="/">Shop</Link>
-                    </a>
+                    </div>
                 </li>
                 <li className={`list-none ${menu === 'cat' ? 'active' : ''}`} onClick={() => setMenu('cat')}>
-                    <a className=" flex items-center text-gray-800 hover:text-blue-700 text-3xl md:text-xl lg:text-3xl">
+                    <div className=" flex items-center text-gray-800 hover:text-blue-700 text-3xl md:text-xl lg:text-3xl">
                         <CatIcon className={`mr-1 stroke-current ${location.pathname === '/cat' ? 'text-blue-900' : ''}`} />
                         <Link className={`no-underline ${location.pathname === '/cat' ? 'text-red-500' : 'text-current'}`} to="/cat">Cat</Link>
-                    </a>
+                    </div>
                 </li>
                 <li className={`list-none ${menu === 'dog' ? 'active' : ''}`} onClick={() => setMenu('dog')}>
-                    <a className="flex items-center text-gray-800 hover:text-blue-700 text-3xl md:text-xl lg:text-3xl">
+                    <div className="flex items-center text-gray-800 hover:text-blue-700 text-3xl md:text-xl lg:text-3xl">
                         <DogIcon style={{ marginRight: "5px", stroke: location.pathname === '/dog' ? '#627ee4' : '' }} />
                         <Link className={`no-underline ${location.pathname === '/dog' ? 'text-red-500' : 'text-current'}`} to="/dog">Dog</Link>
-                    </a>
+                    </div>
                 </li>
             </ul>
             <div className="flex justify-end items-center space-x-8 md:space-x-3 lg:space-x-3 xl:space-x-8">

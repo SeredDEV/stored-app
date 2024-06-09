@@ -14,6 +14,7 @@ import persa5_img from "./Product/cats/persa5.png";
 import persa6_img from "./Product/cats/persa6.png";
 import persa7_img from "./Product/cats/persa7.png";
 import persa8_img from "./Product/cats/persa8.png";
+import persa9_img from "./Product/cats/persa9.png";
 import ragdoll1_img from "./Product/cats/ragdoll1.png";
 import ragdoll2_img from "./Product/cats/ragdoll2.png";
 import ragdoll3_img from "./Product/cats/ragdoll3.png";
@@ -22,6 +23,10 @@ import ragdoll5_img from "./Product/cats/ragdoll5.png";
 import ragdoll6_img from "./Product/cats/ragdoll6.png";
 import ragdoll7_img from "./Product/cats/ragdoll7.png";
 import ragdoll8_img from "./Product/cats/ragdoll8.png";
+import ragdoll9_img from "./Product/cats/ragdoll9.png";
+import ragdoll10_img from "./Product/cats/ragdoll10.png";
+import ragdoll11_img from "./Product/cats/ragdoll11.png";
+import ragdoll12_img from "./Product/cats/ragdoll12.png";
 import siames1_img from "./Product/cats/siames1.png";
 import siames2_img from "./Product/cats/siames2.png";
 import siames3_img from "./Product/cats/siames3.png";
@@ -30,273 +35,354 @@ import siames5_img from "./Product/cats/siames5.png";
 import siames6_img from "./Product/cats/siames6.png";
 import siames7_img from "./Product/cats/siames7.png";
 import siames8_img from "./Product/cats/siames8.png";
+import siames9_img from "./Product/cats/siames9.png";
+
 
 
 let all_product = [
   {
     id: 1,
     name: "Maine Coon",
+    category: "cat",
     image: mainecoon1_img,
     new_price: 50.0,
     old_price: 80.5,
-    description: "Maine Coon cat relaxing in the sun.",
+    description: "Maine Coon cat enjoying the sunshine."
   },
   {
     id: 2,
     name: "Maine Coon",
+    category: "cat",
     image: mainecoon2_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Maine Coon with a playful attitude.",
+    new_price: 50.0,
+    old_price: 80.5,
+    description: "Majestic Maine Coon in the garden."
   },
   {
     id: 3,
     name: "Maine Coon",
+    category: "cat",
     image: mainecoon3_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Maine Coon exploring its surroundings.",
+    new_price: 50.0,
+    old_price: 80.5,
+    description: "Maine Coon cat with a fluffy tail."
   },
   {
     id: 4,
     name: "Maine Coon",
+    category: "cat",
     image: mainecoon4_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Maine Coon with majestic appearance.",
+    new_price: 50.0,
+    old_price: 80.5,
+    description: "Playful Maine Coon cat."
   },
   {
     id: 5,
     name: "Maine Coon",
+    category: "cat",
     image: mainecoon5_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Maine Coon playing with toys.",
+    new_price: 50.0,
+    old_price: 80.5,
+    description: "Maine Coon cat on a sunny day."
   },
   {
     id: 6,
     name: "Maine Coon",
+    category: "cat",
     image: mainecoon6_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Maine Coon grooming itself.",
+    new_price: 50.0,
+    old_price: 80.5,
+    description: "Curious Maine Coon cat."
   },
   {
     id: 7,
     name: "Maine Coon",
+    category: "cat",
     image: mainecoon7_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Maine Coon resting comfortably.",
+    new_price: 50.0,
+    old_price: 80.5,
+    description: "Maine Coon cat with a regal look."
   },
   {
     id: 8,
     name: "Maine Coon",
+    category: "cat",
     image: mainecoon8_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Maine Coon with a curious expression.",
+    new_price: 50.0,
+    old_price: 80.5,
+    description: "Maine Coon cat in the yard."
   },
   {
     id: 9,
-    name: "Persian",
+    name: "Persa",
+    category: "cat",
     image: persa1_img,
     new_price: 60.0,
-    old_price: 100.5,
-    description: "Fluffy Persian with blue eyes.",
+    old_price: 90.5,
+    description: "Persian cat with a luxurious coat."
   },
   {
     id: 10,
-    name: "Persian",
-    image: persa1_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Persian relaxing on couch.",
+    name: "Persa",
+    category: "cat",
+    image: persa2_img,
+    new_price: 60.0,
+    old_price: 90.5,
+    description: "Graceful Persian cat relaxing."
   },
   {
     id: 11,
-    name: "Persian",
-    image: persa2_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Persian with cute face.",
+    name: "Persa",
+    category: "cat",
+    image: persa3_img,
+    new_price: 60.0,
+    old_price: 90.5,
+    description: "Persian cat with a charming look."
   },
   {
     id: 12,
-    name: "Persian",
-    image: persa3_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Sleeping Persian beauty.",
+    name: "Persa",
+    category: "cat",
+    image: persa4_img,
+    new_price: 60.0,
+    old_price: 90.5,
+    description: "Fluffy Persian cat sitting elegantly."
   },
   {
     id: 13,
-    name: "Persian",
-    image: persa4_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Elegant Persian cat.",
+    name: "Persa",
+    category: "cat",
+    image: persa5_img,
+    new_price: 60.0,
+    old_price: 90.5,
+    description: "Persian cat with soft, fluffy fur."
   },
   {
     id: 14,
-    name: "Persian",
-    image: persa5_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Persian with majestic appearance.",
+    name: "Persa",
+    category: "cat",
+    image: persa6_img,
+    new_price: 60.0,
+    old_price: 90.5,
+    description: "Persian cat enjoying a nap."
   },
   {
     id: 15,
-    name: "Persian",
-    image: persa6_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Sleeping Persian kitten.",
+    name: "Persa",
+    category: "cat",
+    image: persa7_img,
+    new_price: 60.0,
+    old_price: 90.5,
+    description: "Elegant Persian cat with long fur."
   },
   {
     id: 16,
-    name: "Persian",
-    image: persa7_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Curious Persian exploring.",
+    name: "Persa",
+    category: "cat",
+    image: persa8_img,
+    new_price: 60.0,
+    old_price: 90.5,
+    description: "Persian cat looking content."
   },
   {
     id: 17,
-    name: "Persian",
-    image: persa8_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Persian beauty with green eyes.",
+    name: "Persa",
+    category: "cat",
+    image: persa9_img,
+    new_price: 60.0,
+    old_price: 90.5,
+    description: "Playful Persian cat in the garden."
   },
   {
     id: 18,
     name: "Ragdoll",
+    category: "cat",
     image: ragdoll1_img,
-    new_price: 50.0,
-    old_price: 80.5,
-    description: "Ragdoll with striking blue eyes.",
+    new_price: 70.0,
+    old_price: 100.5,
+    description: "Ragdoll cat lounging on a soft blanket."
   },
   {
     id: 19,
     name: "Ragdoll",
+    category: "cat",
     image: ragdoll2_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Cute Ragdoll kitten playing.",
+    new_price: 70.0,
+    old_price: 100.5,
+    description: "Ragdoll cat with a calm demeanor."
   },
   {
     id: 20,
     name: "Ragdoll",
+    category: "cat",
     image: ragdoll3_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Ragdoll exploring its surroundings.",
+    new_price: 70.0,
+    old_price: 100.5,
+    description: "Fluffy Ragdoll cat resting peacefully."
   },
   {
     id: 21,
     name: "Ragdoll",
+    category: "cat",
     image: ragdoll4_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Sleeping Ragdoll beauty.",
+    new_price: 70.0,
+    old_price: 100.5,
+    description: "Ragdoll cat with bright blue eyes."
   },
   {
     id: 22,
     name: "Ragdoll",
+    category: "cat",
     image: ragdoll5_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Elegant Ragdoll cat.",
+    new_price: 70.0,
+    old_price: 100.5,
+    description: "Ragdoll cat enjoying a sunny spot."
   },
   {
     id: 23,
     name: "Ragdoll",
+    category: "cat",
     image: ragdoll6_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Ragdoll with majestic appearance.",
+    new_price: 70.0,
+    old_price: 100.5,
+    description: "Charming Ragdoll cat with a fluffy tail."
   },
   {
     id: 24,
     name: "Ragdoll",
+    category: "cat",
     image: ragdoll7_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Sleeping Ragdoll kitten.",
+    new_price: 70.0,
+    old_price: 100.5,
+    description: "Ragdoll cat with a gentle expression."
   },
   {
     id: 25,
     name: "Ragdoll",
+    category: "cat",
     image: ragdoll8_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Curious Ragdoll exploring.",
+    new_price: 70.0,
+    old_price: 100.5,
+    description: "Adorable Ragdoll cat lying down."
   },
   {
     id: 26,
-    name: "Siamese",
-    image: siames1_img,
-    new_price: 50.0,
-    old_price: 80.5,
-    description: "Elegant Siamese cat.",
+    name: "Ragdoll",
+    category: "cat",
+    image: ragdoll9_img,
+    new_price: 70.0,
+    old_price: 100.5,
+    description: "Playful Ragdoll cat on a bed."
   },
   {
     id: 27,
-    name: "Siamese",
-    image: siames2_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Siamese kitten exploring.",
+    name: "Ragdoll",
+    category: "cat",
+    image: ragdoll10_img,
+    new_price: 70.0,
+    old_price: 100.5,
+    description: "Ragdoll cat with a curious look."
   },
   {
     id: 28,
-    name: "Siamese",
-    image: siames3_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Siamese with blue eyes.",
+    name: "Ragdoll",
+    category: "cat",
+    image: ragdoll11_img,
+    new_price: 70.0,
+    old_price: 100.5,
+    description: "Ragdoll cat resting on a chair."
   },
   {
     id: 29,
-    name: "Siamese",
-    image: siames4_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Sleeping Siamese beauty.",
+    name: "Ragdoll",
+    category: "cat",
+    image: ragdoll12_img,
+    new_price: 70.0,
+    old_price: 100.5,
+    description: "Relaxed Ragdoll cat on a pillow."
   },
   {
     id: 30,
-    name: "Siamese",
-    image: siames5_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Curious Siamese exploring.",
+    name: "Siamés",
+    category: "cat",
+    image: siames1_img,
+    new_price: 80.0,
+    old_price: 110.5,
+    description: "Elegant Siamese cat with sleek fur."
   },
   {
     id: 31,
-    name: "Siamese",
-    image: siames6_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Siamese beauty with blue eyes.",
+    name: "Siamés",
+    category: "cat",
+    image: siames2_img,
+    new_price: 80.0,
+    old_price: 110.5,
+    description: "Siamese cat gazing curiously."
   },
   {
     id: 32,
-    name: "Siamese",
-    image: siames7_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Sleeping Siamese kitten.",
+    name: "Siamés",
+    category: "cat",
+    image: siames3_img,
+    new_price: 80.0,
+    old_price: 110.5,
+    description: "Siamese cat lounging in the sun."
   },
   {
     id: 33,
-    name: "Siamese",
+    name: "Siamés",
+    category: "cat",
+    image: siames4_img,
+    new_price: 80.0,
+    old_price: 110.5,
+    description: "Playful Siamese cat ready to pounce."
+  },
+  {
+    id: 34,
+    name: "Siamés",
+    category: "cat",
+    image: siames5_img,
+    new_price: 80.0,
+    old_price: 110.5,
+    description: "Siamese cat with striking blue eyes."
+  },
+  {
+    id: 35,
+    name: "Siamés",
+    category: "cat",
+    image: siames6_img,
+    new_price: 80.0,
+    old_price: 110.5,
+    description: "Siamese cat exploring the outdoors."
+  },
+  {
+    id: 36,
+    name: "Siamés",
+    category: "cat",
+    image: siames7_img,
+    new_price: 80.0,
+    old_price: 110.5,
+    description: "Siamese cat relaxing on the couch."
+  },
+  {
+    id: 37,
+    name: "Siamés",
+    category: "cat",
     image: siames8_img,
-    new_price: 0,
-    old_price: 0,
-    description: "Playful Siamese cat.",
+    new_price: 80.0,
+    old_price: 110.5,
+    description: "Siamese cat with a curious expression."
+  },
+  {
+    id: 38,
+    name: "Siamés",
+    category: "cat",
+    image: siames9_img,
+    new_price: 80.0,
+    old_price: 110.5,
+    description: "Siamese cat with a sleek coat."
   }
+
 ];
 
 export default all_product;

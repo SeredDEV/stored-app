@@ -1,8 +1,9 @@
-import logo from './img/logo.svg';
+import logo from './img/logo.png';
 import cartshop_image from './icons/cartshop_image.png';
-import  hand_icon   from './icons/hand_icon.svg';
+import hand_icon   from './icons/hand_icon.svg';
 import arrow_icon from './icons/arrow.svg';
 import exclusive_image from './img/exclusive_cat.png'
+import dropdown_icon from './icons/dropdown_icon.png'
 
 
 export  {
@@ -10,5 +11,6 @@ export  {
     cartshop_image,
     hand_icon,
     arrow_icon,
-    exclusive_image
+    exclusive_image,
+    dropdown_icon
 };
