@@ -2,7 +2,7 @@ import React from 'react'
 
 const LoginSignup = () => {
   return (
-    <div className="w-full min-h-[76vh] bg-gradient-to-b from-[#F23131] to-[#e1ffea22] pt-24">
+    <div className="w-full py-28 bg-gradient-to-b from-[#F23131] to-[#e1ffea22] pt-32">
       <div className="w-full max-w-xs  sm:max-w-sm  md:max-w-md  lg:max-w-lg bg-white mx-auto p-8 box-border">
         <h1 className="font-bold m-2">Sign Up</h1>
         <div className="flex flex-col gap-6 mt-5  m-2">

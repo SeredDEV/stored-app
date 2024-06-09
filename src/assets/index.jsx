@@ -5,6 +5,8 @@ import arrow_icon from './icons/arrow.svg';
 import exclusive_image from './img/exclusive_cat.png'
 import dropdown_icon from './icons/dropdown_icon.png'
 import arrow_b_icon from './icons/breadcrum_arrow.png'
+import star_icon from './icons/star_icon.png';
+import star_dull_icon from './icons/star_dull_icon.png';
 
 
 export  {
@@ -14,5 +16,7 @@ export  {
     arrow_icon,
     exclusive_image,
     dropdown_icon,
-    arrow_b_icon
+    arrow_b_icon,
+    star_icon,
+    star_dull_icon
 };
