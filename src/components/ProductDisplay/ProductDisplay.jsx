@@ -7,7 +7,7 @@ const ProductDisplay = (props) => {
     const { product } = props;
     const { addToCart } = useContext(ShopContext);
     return (
-        <div className='flex py-5 w-full space-x-4  justify-center items-center '>
+        <div className='flex flex-col md:flex-row md:py-5 w-full space-x-0 md:space-x-4 justify-center items-center '>
             <div className="flex space-x-4">
                 <div className="flex flex-col space-y-4">
                     <img className="w-24 h-32 object-cover" src={product.image} alt="" />
@@ -19,7 +19,7 @@ const ProductDisplay = (props) => {
                     <img className="h-full w-auto object-cover" src={product.image} alt="" />
                 </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col mt-4 md:mt-0">
                 <h1 className="font-bold text-4xl">{product.name}</h1>
                 <div className="flex items-center mt-2 space-x-1 text-gray-800 text-xl">
                     <img src={star_icon} alt="" />
