@@ -10,11 +10,11 @@ const ShopCategory = (props) => {
   return (
     <div >
       <img className='block mx-auto w-full' src={props.banner} alt="" />
-      <div className="flex mx-44  mt-4 justify-between items-center">
+      <div className="flex mx-3 md:mx-40  mt-4 md:mt-0 justify-between items-center text-sm md:text-sm">
         <p>
           <span>Showing 1-12</span> out of 36 products
         </p>
-        <button className="flex items-center p-1 px-4 rounded-full border border-gray-400">
+        <button className="flex items-center p-1 md:p-1 md:px-4 rounded-full border border-gray-400">
           Sort by <img className="ml-2" src={dropdown_icon} alt="" />
         </button>
       </div>
