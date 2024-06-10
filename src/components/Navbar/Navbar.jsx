@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { logo } from '../../assets';
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { ShopContext } from '../../Context/ShopContext';
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
     const [menu, setMenu] = useState("shop");
     const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
+    const { getTotalCartItems } = useContext(ShopContext);
 
     const handleMenuClick = (menuItem) => {
         setMenu(menuItem);
@@ -57,10 +59,10 @@ const Navbar = () => {
                 <div className="flex">
                     <div className="relative mr-10">
                         <Link className="no-underline " to="/cart">
-                            <ShoppingCartIcon className="transform scale-125 lg:scale-100 xl:scale-125" />
+                            <ShoppingCartIcon className="transform scale-150 lg:scale-125 xl:scale-150" />
                         </Link>
                         <div className="absolute top-[-20px] right-[-10px] bg-red-500 text-white text-sm rounded-full w-5 h-5 flex items-center justify-center">
-                            0
+                            {getTotalCartItems()}
                         </div>
                     </div>
                     <div className="relative md:hidden" style={{ zIndex: 9999 }}>
