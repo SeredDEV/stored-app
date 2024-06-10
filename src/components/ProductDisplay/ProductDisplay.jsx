@@ -1,4 +1,5 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
+import { motion, useAnimation } from 'framer-motion';
 import { star_icon, star_dull_icon } from '../../assets';
 import { ShopContext } from '../../Context/ShopContext';
 
@@ -6,8 +7,47 @@ const ProductDisplay = (props) => {
 
     const { product } = props;
     const { addToCart } = useContext(ShopContext);
+
+    const controls = useAnimation();
+    const ref = useRef();
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    controls.start("visible");
+                } else {
+                    controls.start("hidden");
+                }
+            },
+            {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1,
+            }
+        );
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, [controls]);
+
     return (
-        <div className='flex flex-col md:flex-row md:py-5 w-full space-x-0 md:space-x-4 justify-center items-center '>
+        <motion.div
+            ref={ref}
+            animate={controls}
+            initial="hidden"
+            variants={{
+                visible: { opacity: 1, scale: 1 },
+                hidden: { opacity: 0, scale: 0 }
+            }}
+            transition={{ duration: 0.3 }}
+            className='flex flex-col md:flex-row md:py-5 w-full space-x-0 md:space-x-4 justify-center items-center '
+        >
             <div className="flex space-x-4">
                 <div className="flex flex-col space-y-4">
                     <img className="w-24 h-32 object-cover" src={product.image} alt="" />
@@ -55,7 +95,7 @@ const ProductDisplay = (props) => {
                 <p className='mt-2'><span className='font-semibold'>Category:  </span>{product.category}</p>
                 <p className='mt-2'><span className='font-semibold'>Breed :</span> {product.name} </p>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
