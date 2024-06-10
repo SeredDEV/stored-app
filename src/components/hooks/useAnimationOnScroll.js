@@ -4,14 +4,15 @@ import { useAnimation } from 'framer-motion';
 const useAnimationOnScroll = () => {
     const controls = useAnimation();
     const ref = useRef();
+    let observer;
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
+        observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    controls.start("visible");
-                } else {
-                    controls.start("hidden");
+                    controls.start("visible").then(() => {
+                        observer.unobserve(entry.target);
+                    });
                 }
             },
             {
