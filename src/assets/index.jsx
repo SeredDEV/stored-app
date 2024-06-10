@@ -7,6 +7,7 @@ import dropdown_icon from './icons/dropdown_icon.png'
 import arrow_b_icon from './icons/breadcrum_arrow.png'
 import star_icon from './icons/star_icon.png';
 import star_dull_icon from './icons/star_dull_icon.png';
+import remove_icon from './icons/cart_cross_icon.png';
 
 
 export  {
@@ -18,5 +19,6 @@ export  {
     dropdown_icon,
     arrow_b_icon,
     star_icon,
-    star_dull_icon
+    star_dull_icon,
+    remove_icon
 };
