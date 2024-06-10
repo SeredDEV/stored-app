@@ -3,7 +3,7 @@ import { hand_icon, arrow_icon, cartshop_image } from '../../assets'
 
 const Cartshop = () => {
   return (
-    <div className='min-h-screen flex flex-col md:flex-row items-center justify-between p-2.5 px-9 bg-gradient-to-b from-[#ff6347] to-[#e1ffea22]'>
+    <div className='min-h-screen sm:min-h-screen md:min-h-80 lg:min-h-80 xl:min-h-80 2xl:min-h-80 flex flex-col md:flex-row items-center justify-between p-2.5 px-9 bg-gradient-to-b from-[#ff6347] to-[#e1ffea22]'>
       <div className='w-[350px] md:w-[450px] md:hidden relative'>
         <img src={cartshop_image} alt="" className='inset-0 bg-gradient-to-r from-[#ff4141] to-[#e1ffea22]'  />
       </div>

@@ -4,7 +4,7 @@ import Item from '../Item/Item'
 
 const Popular = () => {
   return (
-    <div className='flex flex-col items-center justify-center w-full'>
+    <div className='flex flex-col items-center justify-center w-full mt-24'>
       <h1 className="text-2xl font-bold mb-4 text-center" style={{ fontSize: '40px' }}>POPULAR CAT</h1>
       <hr className="mb-4" style={{ width: '150px', height: '4px', borderRadius: '10px', background: '#252525' }} />
       <div className='flex flex-wrap items-start justify-center'>
