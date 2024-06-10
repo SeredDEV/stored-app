@@ -5,36 +5,36 @@ import p4_img from './Product/cats/persa3.png'
 
 let data_product = [
   {
-    id: 1,
+    id: 29,
     name: "Ragdolls",
     image: p1_img,
     new_price: 500.00,
     old_price: 800.50,
-    description: "Ragdoll cats are large, affectionate, and gentle."
+    description: "Relaxed Ragdoll cat on a pillow."
   },
   {
-    id: 2,
-    name: "Siames",
+    id: 33,
+    name: "Siamés",
     image: p2_img,
     new_price: 850.00,
     old_price: 1200.50,
-    description: "Siamese cats are elegant, vocal, and social."
+    description: "Playful Siamese cat ready to pounce."
   },
   {
-    id: 3,
+    id: 4,
     name: "Maine Coons",
     image: p3_img,
     new_price: 600.00,
     old_price: 1000.50,
-    description: "Maine Coon cats are large, friendly, and playful."
+    description: "Playful Maine Coon cat."
   },
   {
-    id: 4,
-    name: "Persians",
+    id: 11,
+    name: "Persa",
     image: p4_img,
     new_price: 1000.00,
     old_price: 1500.00,
-    description: "Persian cats are long-haired, calm, and affectionate."
+    description: "Persian cat with a charming look."
   },
 ];
 
