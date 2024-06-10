@@ -10,7 +10,7 @@ const ShopCategory = (props) => {
   return (
     <div >
       <img className='block mx-auto w-full' src={props.banner} alt="" />
-      <div className="flex mx-3 md:mx-40  mt-4 md:mt-0 justify-between items-center text-sm md:text-sm">
+      <div className="flex  sm:mx-20 md:mx-20 lg:mx-18 xl:mx-18 2xl:mx-20 mt-4 md:mt-0 justify-between items-center text-xs sm:text-xs md:text-base">
         <p>
           <span>Showing 1-12</span> out of 36 products
         </p>
