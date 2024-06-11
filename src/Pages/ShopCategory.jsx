@@ -35,6 +35,7 @@ const ShopCategory = (props) => {
     )
     : all_products
       .filter((item) => item.category === props.category)
+      .sort(() => Math.random() - 0.5)
       .slice(0, currentIndex);
 
   return (
