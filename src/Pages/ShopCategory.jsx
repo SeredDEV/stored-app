@@ -1,12 +1,21 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { ShopContext } from '../Context/ShopContext';
 import { dropdown_icon } from '../assets/index';
 import Item from '../components/Item/Item';
+import Skeleton from '../components/Skeleton/Skeleton';
 
 const ShopCategory = (props) => {
   const { all_products } = useContext(ShopContext);
   const [currentIndex, setCurrentIndex] = useState(12);
   const [selectedProductName, setSelectedProductName] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000); 
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleExploreMore = () => {
     setCurrentIndex(currentIndex + 12);
@@ -65,19 +74,23 @@ const ShopCategory = (props) => {
         </button>
       </div>
       <div className="flex flex-wrap justify-center mx-auto w-full">
-        {filteredProducts.map((item, i) => (
-          <Item
-            key={i}
-            id={item.id}
-            name={item.name}
-            image={item.image}
-            new_price={item.new_price}
-            old_price={item.old_price}
-            description={item.description}
-          />
-        ))}
+        {isLoading ? (
+          <Skeleton />
+        ) : (
+          filteredProducts.map((item, i) => (
+            <Item
+              key={i}
+              id={item.id}
+              name={item.name}
+              image={item.image}
+              new_price={item.new_price}
+              old_price={item.old_price}
+              description={item.description}
+            />
+          ))
+        )}
       </div>
-      {hasMoreProducts && (
+      {hasMoreProducts && !isLoading && (
         <button
           onClick={handleExploreMore}
           className="flex justify-center items-center mx-auto my-1 w-48 h-16 rounded-xl bg-red-600 text-white text-lg font-medium"
