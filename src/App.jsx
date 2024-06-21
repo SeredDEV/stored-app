@@ -9,6 +9,7 @@ import LoginSingup from './Pages/LoginSingup';
 import cat_banner from './assets/banner/banner_cat.svg'
 import dog_banner from './assets/banner/banner_dog.svg'
 import Footer from './components/Footer/Footer';
+import Signup from './Pages/Signup';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           </Route>
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={< LoginSingup />} />
+          <Route path="/signup" element={< Signup />} />
         </Routes>
         <Footer />
       </BrowserRouter>
